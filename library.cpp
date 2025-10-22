@@ -19,12 +19,34 @@ bool Library::removeBook(const string& isbn) {
         [&isbn](const unique_ptr<Book>& book) {
             return book->getISBN() == isbn;
         });
-    
-    if (it != books.end()) {
-        books.erase(it);
-        return true;
+
+    if (it == books.end()) {
+        return false;
     }
-    return false;
+
+  
+    cout << (*it)->toString() << endl;
+
+    char choix;
+    cout << "Voulez-vous vraiment test ce livre ? (O/N) : ";
+    cin >> choix;
+    choix = tolower(choix);
+
+    
+    while (choix != 'o' && choix != 'n') {
+        cout << "Entrée invalide. Veuillez répondre par O ou N : ";
+        cin >> choix;
+        choix = tolower(choix);
+    }
+
+    if (choix == 'o') {
+        books.erase(it);
+        cout << "Livre supprimé avec succès.\n";
+        return true;
+    } else {
+        cout << "Suppression annulée.\n";
+        return false;
+    }
 }
 
 // Find book by ISBN

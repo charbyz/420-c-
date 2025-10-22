@@ -28,7 +28,7 @@ public:
     // Setters
     void setTitle(const string& title);
     void setAuthor(const string& author);
-    void setISBN(const string& isbn);
+    void setISBN(const string& isbn);  
     void setAvailability(bool available);
     void setBorrowerName(const string& name);
     

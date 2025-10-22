@@ -88,9 +88,7 @@ int main() {
                 string isbn = getInput("Entrez l'ISBN du livre à supprimer : ");
                 
                 if (library.removeBook(isbn)) {
-                    cout << "Livre supprimé avec succès !\n";
                 } else {
-                    cout << "Livre non trouvé.\n";
                 }
                 pauseForInput();
                 break;
