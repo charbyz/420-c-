@@ -32,6 +32,7 @@ void displayMenu() {
     cout << "11. Statistiques de la Bibliothèque\n";
     cout << "12. Sauvegarder les Données\n";
     cout << "13. Créer une Sauvegarde\n";
+    cout << "14, afficher les livres triee\n";
     cout << "0.  Quitter\n";
     cout << "======================================================\n";
     cout << "Entrez votre choix : ";
@@ -209,6 +210,18 @@ int main() {
                 fileManager.createBackup();
                 pauseForInput();
                 break;
+            }
+
+            case 14: {//trier un livre
+                cout <<"tries par titre ou par auteur(1 ou 2):\n";
+                int tri;
+                cin >> tri;
+                if(tri == 1){
+                    library.trierParTitre();
+                }else{
+                    library.trierParAuteur();
+                }        
+                library.displayAllBooks();
             }
             
             case 0: // Exit

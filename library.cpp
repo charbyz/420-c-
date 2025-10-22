@@ -223,4 +223,19 @@ int Library::getAvailableBookCount() const {
             return book->getAvailability();
         });
 }
-int Library::getCheckedOutBookCount() const { return getTotalBooks() - getAvailableBookCount(); }
+int Library::getCheckedOutBookCount() const { return getTotalBooks() - getAvailableBookCount();
+ }
+ void Library::trierParTitre(){
+    std::sort(books.begin(), books.end(),
+[](const std::unique_ptr<Book>& a, const std::unique_ptr<Book>& b){
+    return a->getTitle()< b -> getTitle();
+});
+ }
+
+
+ void Library::trierParAuteur(){
+    std::sort(books.begin(), books.end(),
+[](const std::unique_ptr<Book>& a, const std::unique_ptr<Book>& b){
+    return a->getAuthor()< b -> getAuthor();
+});
+ }
