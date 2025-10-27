@@ -14,3 +14,11 @@ $ make
 
 Il contient 2 fichiers `books.txt`et `users.txt` que vous pouvez utilisez pour tester votre code.
 Pour ca il suffit de les copiers dans le repertoire `build` avec l'application `bibliotheque`
+
+# Question veille technologique
+
+# question 1
+
+la methode qu'on a peu ou presque pas vu en classe est la methode getLine. getLine permet de lire du text a partir d'un flux et de stocker la ligne dans une chaine. Avec la methode getLine on il y a deux ou trois parametres dans notre cas on en utilise 3. Donc getLine(source, destination, delim). source est le flux d'entree la destination doit etre une variable ou sera stockee la ligne lue et demlim qui est optionnel est un caractere qui indique jusqu'ou s'arreter dans notre cas dans book.cpp on s'arrete a chaque pipe |.
+
+# question 2
